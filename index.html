@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kad Kahwin Digital | Aiman & Sofia</title>
+    <meta
+      name="description"
+      content="Kad jemputan kahwin digital untuk Walimatul Urus Aiman dan Sofia. Lihat maklumat majlis, lokasi, RSVP, galeri dan contact keluarga."
+    />
+    <meta property="og:title" content="Walimatul Urus Aiman & Sofia" />
+    <meta
+      property="og:description"
+      content="Dengan penuh kesyukuran, kami menjemput anda ke majlis perkahwinan kami."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80"
+    />
+    <meta name="theme-color" content="#f8f0df" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#jemputan">Langkau ke kandungan</a>
+
+    <header class="hero" id="cover" aria-label="Kad jemputan utama">
+      <div class="hero__media" aria-hidden="true"></div>
+      <button class="music-toggle" type="button" aria-label="Mainkan muzik latar">
+        <span aria-hidden="true">♪</span>
+      </button>
+
+      <div class="hero__content">
+        <p class="eyebrow">Walimatul Urus</p>
+        <h1>
+          <span data-bind="groomName">Aiman Hakimi</span>
+          <small>&amp;</small>
+          <span data-bind="brideName">Sofia Nadhirah</span>
+        </h1>
+        <p class="hero__date" data-bind="dateDisplay">Sabtu, 12 September 2026</p>
+        <p class="hero__note">Dengan penuh kesyukuran, kami menjemput anda meraikan hari bahagia kami.</p>
+        <a class="button button--primary" href="#jemputan" aria-label="Buka kad jemputan">Buka Kad</a>
+      </div>
+
+      <div class="hero__hint" aria-hidden="true">Jemputan</div>
+    </header>
+
+    <main>
+      <section class="section invitation reveal" id="jemputan">
+        <div class="section__inner narrow">
+          <p class="eyebrow">Assalamualaikum Warahmatullahi Wabarakatuh</p>
+          <h2>Dengan Penuh Kesyukuran</h2>
+          <p>
+            Dengan hormat dan penuh takzim, kami menjemput Dato'/Datin/Tuan/Puan/Encik/Cik
+            seisi keluarga ke majlis perkahwinan putera dan puteri kami.
+          </p>
+          <p>
+            Semoga kehadiran dan doa restu anda menyerikan lagi majlis serta membawa keberkatan
+            kepada pasangan mempelai.
+          </p>
+        </div>
+      </section>
+
+      <section class="section couple reveal" id="pengantin">
+        <div class="section__inner">
+          <p class="eyebrow">Mempelai</p>
+          <h2>Raja Sehari</h2>
+          <div class="couple-grid">
+            <article class="couple-card">
+              <span class="role">Pengantin Lelaki</span>
+              <h3 data-bind="groomName">Aiman Hakimi</h3>
+              <p>Putera kepada</p>
+              <strong data-bind="groomParents">Encik Abdullah bin Hassan &amp; Puan Noraini binti Ahmad</strong>
+            </article>
+            <div class="ampersand" aria-hidden="true">&amp;</div>
+            <article class="couple-card">
+              <span class="role">Pengantin Perempuan</span>
+              <h3 data-bind="brideName">Sofia Nadhirah</h3>
+              <p>Puteri kepada</p>
+              <strong data-bind="brideParents">Encik Ismail bin Omar &amp; Puan Salmah binti Yusof</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section details reveal" id="majlis">
+        <div class="section__inner">
+          <p class="eyebrow">Butiran Majlis</p>
+          <h2>Maklumat Walimatul Urus</h2>
+          <div class="details-grid">
+            <article class="info-card">
+              <span>Tarikh</span>
+              <strong data-bind="dateDisplay">Sabtu, 12 September 2026</strong>
+            </article>
+            <article class="info-card">
+              <span>Masa</span>
+              <strong data-bind="time">11.00 pagi - 4.00 petang</strong>
+            </article>
+            <article class="info-card info-card--wide">
+              <span>Lokasi</span>
+              <strong data-bind="venueName">Dewan Seri Melati</strong>
+              <p data-bind="venueAddress">No. 12, Jalan Melati Indah, 43000 Kajang, Selangor</p>
+            </article>
+          </div>
+
+          <div class="timeline" aria-label="Atur cara majlis">
+            <div>
+              <time>11.00 pagi</time>
+              <p>Ketibaan tetamu</p>
+            </div>
+            <div>
+              <time>12.30 tengah hari</time>
+              <p>Makan beradab</p>
+            </div>
+            <div>
+              <time>2.00 petang</time>
+              <p>Sesi bergambar</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section countdown-section reveal" id="countdown">
+        <div class="section__inner">
+          <p class="eyebrow">Menghitung Hari</p>
+          <h2>Countdown Majlis</h2>
+          <div class="countdown" aria-live="polite">
+            <div><strong id="days">00</strong><span>Hari</span></div>
+            <div><strong id="hours">00</strong><span>Jam</span></div>
+            <div><strong id="minutes">00</strong><span>Minit</span></div>
+            <div><strong id="seconds">00</strong><span>Saat</span></div>
+          </div>
+          <p class="countdown-message" id="countdownMessage"></p>
+        </div>
+      </section>
+
+      <section class="section location reveal" id="lokasi">
+        <div class="section__inner">
+          <p class="eyebrow">Arah Tuju</p>
+          <h2>Lokasi Majlis</h2>
+          <p class="section-copy" data-bind="venueAddress">No. 12, Jalan Melati Indah, 43000 Kajang, Selangor</p>
+          <div class="button-row">
+            <a class="button button--primary" data-link="googleMapsUrl" href="#" target="_blank" rel="noreferrer" aria-label="Buka lokasi di Google Maps">Google Maps</a>
+            <a class="button button--ghost" data-link="wazeUrl" href="#" target="_blank" rel="noreferrer" aria-label="Buka lokasi di Waze">Waze</a>
+          </div>
+          <div class="map-placeholder" role="img" aria-label="Placeholder peta lokasi majlis">
+            <span>Map Embed Placeholder</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section rsvp reveal" id="rsvp">
+        <div class="section__inner">
+          <p class="eyebrow">RSVP</p>
+          <h2>Sahkan Kehadiran</h2>
+          <form class="rsvp-form" id="rsvpForm" novalidate>
+            <label>
+              Nama
+              <input type="text" id="guestName" name="guestName" placeholder="Nama anda" required />
+            </label>
+            <label>
+              Kehadiran
+              <select id="attendance" name="attendance" required>
+                <option value="">Pilih kehadiran</option>
+                <option value="Hadir">Hadir</option>
+                <option value="Tidak Hadir">Tidak Hadir</option>
+              </select>
+            </label>
+            <label>
+              Bilangan Tetamu
+              <input type="number" id="guestCount" name="guestCount" min="1" max="10" value="1" required />
+            </label>
+            <label>
+              Ucapan Ringkas
+              <textarea id="message" name="message" rows="4" placeholder="Ucapan dan doa anda"></textarea>
+            </label>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+            <button class="button button--primary" type="submit" aria-label="Hantar RSVP">Hantar RSVP</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section gallery reveal" id="galeri">
+        <div class="section__inner">
+          <p class="eyebrow">Kenangan</p>
+          <h2>Galeri Pasangan</h2>
+          <div class="gallery-grid" id="galleryGrid" aria-label="Galeri gambar pasangan"></div>
+        </div>
+      </section>
+
+      <section class="section contact reveal" id="contact">
+        <div class="section__inner">
+          <p class="eyebrow">Pertanyaan</p>
+          <h2>Hubungi Keluarga</h2>
+          <div class="button-row" id="contactButtons"></div>
+        </div>
+      </section>
+
+      <section class="section gift reveal" id="gift">
+        <div class="section__inner narrow">
+          <p class="eyebrow">Sumbangan Ikhlas</p>
+          <h2>Wedding Gift</h2>
+          <p class="section-copy">
+            Untuk yang berhajat memberi tanda ingatan, sumbangan ikhlas boleh disalurkan melalui maklumat berikut.
+          </p>
+          <div class="gift-card">
+            <div>
+              <span>Bank</span>
+              <strong data-bank="bankName">Maybank</strong>
+            </div>
+            <div>
+              <span>No. Akaun</span>
+              <strong data-bank="accountNumber">123456789012</strong>
+            </div>
+            <div>
+              <span>Nama Penerima</span>
+              <strong data-bank="recipientName">Aiman Hakimi</strong>
+            </div>
+            <button class="button button--ghost" type="button" id="copyAccount" aria-label="Salin nombor akaun">Salin No. Akaun</button>
+            <div class="qr-placeholder" role="img" aria-label="Placeholder QR sumbangan">QR</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="section__inner narrow">
+        <p>Terima kasih atas doa dan kehadiran anda.</p>
+        <p>
+          Semoga Allah memberkati pasangan pengantin, menghimpunkan mereka dalam kebaikan
+          dan mengurniakan rumah tangga yang sakinah, mawaddah wa rahmah.
+        </p>
+      </div>
+    </footer>
+
+    <nav class="quick-actions" aria-label="Tindakan pantas">
+      <a href="#lokasi" aria-label="Ke bahagian lokasi">Maps</a>
+      <a href="#rsvp" aria-label="Ke bahagian RSVP">RSVP</a>
+      <a data-quick-whatsapp href="#" target="_blank" rel="noreferrer" aria-label="Hubungi melalui WhatsApp">WhatsApp</a>
+    </nav>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Paparan gambar">
+      <button type="button" class="lightbox__close" aria-label="Tutup gambar">&times;</button>
+      <img src="" alt="" id="lightboxImage" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
