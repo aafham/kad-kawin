@@ -1,4 +1,5 @@
 :root {
+  /* Colors */
   --cream: #fbf6eb;
   --ivory: #fffdf8;
   --champagne: #d6b46d;
@@ -9,8 +10,42 @@
   --muted: #756d62;
   --line: rgba(169, 120, 44, 0.22);
   --shadow: 0 18px 55px rgba(68, 51, 30, 0.13);
+
+  /* Typography */
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Inter", Arial, sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.35rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1rem;
+  --space-xl: 1.25rem;
+  --space-2xl: 1.5rem;
+  --space-3xl: 2.25rem;
+  --space-4xl: 3.5rem;
+  --space-5xl: 4.5rem;
+
+  /* Border radius */
+  --radius-sm: 0.35rem;
+  --radius-md: 0.45rem;
+  --radius-lg: 0.5rem;
+  --radius-full: 999px;
+
+  /* Animations */
+  --duration-fast: 0.2s;
+  --duration-normal: 0.35s;
+  --duration-reveal: 0.75s;
+  --easing-ease: ease;
+  --easing-ease-in-out: ease-in-out;
+
+  /* Z-index scale */
+  --z-skip-link: 20;
+  --z-quick-actions: 10;
+  --z-lightbox-close: 30;
+  --z-lightbox: 30;
+  --z-backdrop: -1;
+  --z-behind: -2;
 }
 
 * {
@@ -48,13 +83,13 @@ img {
   position: fixed;
   top: 0.75rem;
   left: 0.75rem;
-  z-index: 20;
-  padding: 0.65rem 0.9rem;
+  z-index: var(--z-skip-link);
+  padding: 0.65rem var(--space-xl);
   color: var(--ivory);
   background: var(--ink);
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   transform: translateY(-140%);
-  transition: transform 0.2s ease;
+  transition: transform var(--duration-fast) var(--easing-ease);
 }
 
 .skip-link:focus {
@@ -67,14 +102,14 @@ img {
   display: grid;
   place-items: center;
   overflow: hidden;
-  padding: 4.5rem 1.25rem 5.5rem;
+  padding: var(--space-5xl) var(--space-xl) calc(var(--space-5xl) + var(--space-lg));
   isolation: isolate;
 }
 
 .hero__media {
   position: absolute;
   inset: 0;
-  z-index: -2;
+  z-index: var(--z-behind);
   background:
     linear-gradient(rgba(52, 44, 35, 0.5), rgba(52, 44, 35, 0.36)),
     url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=78") center/cover;
@@ -84,7 +119,7 @@ img {
   content: "";
   position: absolute;
   inset: 0.85rem;
-  z-index: -1;
+  z-index: var(--z-backdrop);
   border: 1px solid rgba(255, 253, 248, 0.42);
   pointer-events: none;
 }
@@ -97,7 +132,7 @@ img {
 }
 
 .eyebrow {
-  margin: 0 0 0.65rem;
+  margin: 0 0 var(--space-sm);
   color: var(--gold);
   font-size: 0.76rem;
   font-weight: 700;
@@ -131,7 +166,7 @@ h1 small {
 }
 
 h2 {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-lg);
   font-size: clamp(2.35rem, 9vw, 4.25rem);
 }
 
@@ -143,7 +178,7 @@ h3 {
 .hero__date,
 .hero__note {
   max-width: 34rem;
-  margin: 1rem auto 0;
+  margin: var(--space-lg) auto 0;
   font-weight: 500;
 }
 
@@ -186,13 +221,13 @@ h3 {
   align-items: center;
   justify-content: center;
   min-height: 3rem;
-  padding: 0.85rem 1.25rem;
+  padding: 0.85rem var(--space-xl);
   border: 1px solid transparent;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: transform var(--duration-fast) var(--easing-ease), box-shadow var(--duration-fast) var(--easing-ease), background var(--duration-fast) var(--easing-ease);
 }
 
 .button:hover,
@@ -201,7 +236,7 @@ h3 {
 }
 
 .button--primary {
-  margin-top: 1.55rem;
+  margin-top: var(--space-2xl);
   color: var(--ink);
   background: linear-gradient(135deg, #ffe9a8, var(--champagne));
   box-shadow: 0 16px 34px rgba(54, 37, 17, 0.22);
@@ -214,7 +249,7 @@ h3 {
 }
 
 .section {
-  padding: 4.5rem 1.15rem;
+  padding: var(--space-5xl) var(--space-xl);
 }
 
 .section__inner {
@@ -229,12 +264,12 @@ h3 {
 
 .section-copy {
   max-width: 38rem;
-  margin: 0 auto 1.4rem;
+  margin: 0 auto var(--space-2xl);
   color: var(--muted);
 }
 
 .invitation p {
-  margin: 0 auto 1rem;
+  margin: 0 auto var(--space-lg);
   max-width: 42rem;
   color: var(--muted);
   font-size: 1.02rem;
@@ -242,9 +277,9 @@ h3 {
 
 .couple-grid {
   display: grid;
-  gap: 1rem;
+  gap: var(--space-lg);
   align-items: center;
-  margin-top: 1.5rem;
+  margin-top: var(--space-2xl);
 }
 
 .couple-card,
@@ -253,18 +288,18 @@ h3 {
 .rsvp-form {
   background: rgba(255, 253, 248, 0.72);
   border: 1px solid rgba(255, 253, 248, 0.88);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
 }
 
 .couple-card {
-  padding: 1.45rem;
+  padding: var(--space-2xl);
 }
 
 .couple-card p,
 .couple-card strong {
-  margin: 0.65rem 0 0;
+  margin: var(--space-lg) 0 0;
   color: var(--muted);
 }
 
@@ -290,12 +325,12 @@ h3 {
 
 .details-grid {
   display: grid;
-  gap: 0.85rem;
-  margin-top: 1.4rem;
+  gap: var(--space-sm);
+  margin-top: var(--space-2xl);
 }
 
 .info-card {
-  padding: 1.2rem;
+  padding: var(--space-xl);
   text-align: left;
 }
 
@@ -311,27 +346,27 @@ h3 {
 .info-card strong,
 .gift-card strong {
   display: block;
-  margin-top: 0.35rem;
+  margin-top: var(--space-xs);
   font-size: 1.05rem;
 }
 
 .info-card p {
-  margin: 0.45rem 0 0;
+  margin: var(--space-xs) 0 0;
   color: var(--muted);
 }
 
 .timeline {
   display: grid;
-  gap: 0.7rem;
-  margin-top: 1.2rem;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
   text-align: left;
 }
 
 .timeline div {
   display: grid;
   grid-template-columns: 7.8rem 1fr;
-  gap: 0.7rem;
-  padding: 0.9rem 0;
+  gap: var(--space-md);
+  padding: var(--space-lg) 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -348,15 +383,15 @@ h3 {
 .countdown {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.8rem;
-  margin-top: 1.4rem;
+  gap: var(--space-md);
+  margin-top: var(--space-2xl);
 }
 
 .countdown div {
-  padding: 1rem 0.5rem;
+  padding: var(--space-lg) var(--space-sm);
   background: rgba(255, 253, 248, 0.76);
   border: 1px solid var(--line);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-lg);
 }
 
 .countdown strong {
@@ -382,35 +417,35 @@ h3 {
 
 .button-row {
   display: grid;
-  gap: 0.75rem;
-  margin-top: 1rem;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
 }
 
 .map-placeholder {
   display: grid;
   place-items: center;
   min-height: 13rem;
-  margin-top: 1.2rem;
+  margin-top: var(--space-xl);
   color: var(--gold);
   background:
     linear-gradient(135deg, rgba(111, 123, 99, 0.14), rgba(214, 180, 109, 0.18)),
     repeating-linear-gradient(45deg, rgba(169, 120, 44, 0.09) 0 1px, transparent 1px 18px);
   border: 1px solid var(--line);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-lg);
   font-weight: 800;
 }
 
 .rsvp-form {
   display: grid;
-  gap: 1rem;
-  margin-top: 1.4rem;
-  padding: 1.1rem;
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+  padding: var(--space-xl);
   text-align: left;
 }
 
 label {
   display: grid;
-  gap: 0.35rem;
+  gap: var(--space-xs);
   color: var(--ink);
   font-weight: 700;
 }
@@ -419,11 +454,11 @@ input,
 select,
 textarea {
   width: 100%;
-  padding: 0.9rem 0.95rem;
+  padding: var(--space-lg) var(--space-xl);
   color: var(--ink);
   background: rgba(255, 253, 248, 0.9);
   border: 1px solid var(--line);
-  border-radius: 0.45rem;
+  border-radius: var(--radius-md);
   font: inherit;
 }
 
@@ -454,8 +489,8 @@ a:focus-visible {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-  margin-top: 1.4rem;
+  gap: var(--space-md);
+  margin-top: var(--space-2xl);
 }
 
 .gallery-grid button {
@@ -465,7 +500,7 @@ a:focus-visible {
   overflow: hidden;
   background: #efe0c8;
   border: 0;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-lg);
   cursor: pointer;
 }
 
@@ -474,7 +509,7 @@ a:focus-visible {
   height: 100%;
   min-height: 11rem;
   object-fit: cover;
-  transition: transform 0.35s ease;
+  transition: transform var(--duration-normal) var(--easing-ease);
 }
 
 .gallery-grid button:hover img {
@@ -483,9 +518,9 @@ a:focus-visible {
 
 .gift-card {
   display: grid;
-  gap: 1rem;
-  margin-top: 1.25rem;
-  padding: 1.15rem;
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+  padding: var(--space-xl);
   text-align: left;
 }
 
@@ -502,34 +537,34 @@ a:focus-visible {
     var(--ivory);
   background-size: 1rem 1rem;
   border: 1px solid var(--line);
-  border-radius: 0.35rem;
+  border-radius: var(--radius-md);
   font-weight: 900;
 }
 
 .footer {
-  padding: 3.5rem 1.15rem 6.5rem;
+  padding: var(--space-3xl) var(--space-xl) calc(var(--space-5xl) + var(--space-lg));
   color: var(--ivory);
   background: linear-gradient(135deg, #3b332c, #5a4b3b);
   text-align: center;
 }
 
 .footer p {
-  margin: 0 auto 0.9rem;
+  margin: 0 auto var(--space-lg);
 }
 
 .quick-actions {
   position: fixed;
-  right: 0.8rem;
-  bottom: 0.8rem;
-  left: 0.8rem;
-  z-index: 10;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  left: var(--space-md);
+  z-index: var(--z-quick-actions);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.45rem;
-  padding: 0.45rem;
+  gap: var(--space-xs);
+  padding: var(--space-xs);
   background: rgba(255, 253, 248, 0.92);
   border: 1px solid rgba(255, 253, 248, 0.86);
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   box-shadow: 0 18px 42px rgba(57, 42, 26, 0.18);
   backdrop-filter: blur(18px);
 }
@@ -539,7 +574,7 @@ a:focus-visible {
   display: grid;
   place-items: center;
   color: var(--ink);
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   font-size: 0.82rem;
   font-weight: 800;
   text-decoration: none;
@@ -552,10 +587,10 @@ a:focus-visible {
 .lightbox {
   position: fixed;
   inset: 0;
-  z-index: 30;
+  z-index: var(--z-lightbox);
   display: none;
   place-items: center;
-  padding: 1rem;
+  padding: var(--space-lg);
   background: rgba(30, 24, 18, 0.88);
 }
 
@@ -567,14 +602,14 @@ a:focus-visible {
   width: min(100%, 920px);
   max-height: 82vh;
   object-fit: contain;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-lg);
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.4);
 }
 
 .lightbox__close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: var(--space-lg);
+  right: var(--space-lg);
   width: 3rem;
   height: 3rem;
   color: var(--ivory);
@@ -588,7 +623,7 @@ a:focus-visible {
 .reveal {
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity 0.75s ease, transform 0.75s ease;
+  transition: opacity var(--duration-reveal) var(--easing-ease), transform var(--duration-reveal) var(--easing-ease);
 }
 
 .reveal.is-visible {
@@ -598,7 +633,7 @@ a:focus-visible {
 
 @media (min-width: 680px) {
   .section {
-    padding: 6rem 1.5rem;
+    padding: 6rem var(--space-2xl);
   }
 
   .couple-grid {
@@ -624,7 +659,7 @@ a:focus-visible {
 
   .rsvp-form {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 1.4rem;
+    padding: var(--space-2xl);
   }
 
   .rsvp-form label:nth-child(4),
